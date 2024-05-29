@@ -17,4 +17,25 @@ export class UncommonPageComponent {
     this.name = 'Derly';
     this.genre = 'female';
   }
+
+  public clients: string[] = [
+    'Maria',
+    'Juan',
+    'Pedro',
+    'Jesus',
+    'Andrea',
+    'Xiomara',
+    'Anouk',
+  ];
+
+  public clientsMap = {
+    '=0': 'no tenemos ningún cliente esperando',
+    '=1': 'tenemos 1 cliente esperando',
+    'other': 'tenemos # clientes esperando',
+
+  }
+
+  deletedClient(): void {
+    this.clients.shift();
+  }
 }
